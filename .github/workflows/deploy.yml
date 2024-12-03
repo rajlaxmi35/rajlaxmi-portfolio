@@ -1,3 +1,10 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Replace with your main branch name if different
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -5,15 +12,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Match this to your current Node.js version
+          node-version: '16'  # Use the version matching your project
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build and export
+      - name: Build and export static files
         run: npm run export
 
       - name: Deploy to GitHub Pages
