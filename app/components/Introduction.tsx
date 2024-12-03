@@ -13,7 +13,7 @@ export default function Introduction() {
   return (
     <section id="about" className="py-20 text-center min-h-screen flex flex-col justify-center items-center">
       <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      <img src="/profile.JPG?height=150&width=150" alt="Rajlaxmi" className="mx-auto rounded-full mb-6 border-4 border-teal-300 shadow-lg w-40 h-60" />
+      <img src="/rajlaxmi-portfolio/profile.JPG?height=150&width=150" alt="Rajlaxmi" className="mx-auto rounded-full mb-6 border-4 border-teal-300 shadow-lg w-40 h-60" />
         <h1 className="text-5xl font-bold mb-4 text-white">Rajlaxmi</h1>
         <h2 className="text-3xl text-teal-300 mb-6">Full Stack Developer</h2>
         <p className="max-w-2xl mx-auto text-white mb-8 text-lg">

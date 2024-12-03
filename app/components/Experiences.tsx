@@ -23,7 +23,7 @@ export default function Experience() {
         'Implemented continuous integration and delivery pipelines for efficient deployment, reducing manual intervention and deployment time by 30%.',
         'Led code reviews and mentored junior engineers, improving team productivity and code quality.',
       ],
-      image: '/optum.png?height=100&width=100',
+      image: '/rajlaxmi-portfolio/optum.png?height=100&width=100',
       live: 'https://www.myuhc.com'
     },
     {
@@ -36,7 +36,7 @@ export default function Experience() {
         'Reviewed and refactored legacy code to optimize performance, leading to a 20% reduction in system response time.',
         'Ensured compliance with best practices for code quality, security, and maintainability.',
       ],
-      image: '/optum.png?height=200&width=300',
+      image: '/rajlaxmi-portfolio/optum.png?height=200&width=300',
       live: 'https://www.myuhc.com'
     },
   ]
