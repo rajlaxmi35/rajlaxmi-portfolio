@@ -1,9 +1,7 @@
-/**
- * @type {import('next').NextConfig}
- */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-  };
-  
-  module.exports = nextConfig;
-  
+  output: 'export',
+  basePath: '/rajlaxmi-portfolio', // Add this to specify your GitHub Pages path
+};
+
+module.exports = nextConfig;
