@@ -5,16 +5,18 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
 export default function Contact() {
   const [status, setStatus] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setStatus('Sending...')
+    setIsLoading(true)
+    setStatus('')
 
     const form = e.currentTarget
     const formData = new FormData(form)
 
     try {
-      const response = await fetch('https://formspree.io/f/mldezwen', { // Replace with your Formspree URL
+      const response = await fetch('https://formspree.io/f/mldezwen', {
         method: 'POST',
         body: formData,
         headers: {
@@ -31,6 +33,8 @@ export default function Contact() {
     } catch (error) {
       console.error('Error:', error)
       setStatus('Error sending message. Please try again.')
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -42,7 +46,7 @@ export default function Contact() {
           <h3 className="text-2xl font-semibold mb-4 text-teal-300">Get in Touch</h3>
           <div className="flex items-center mb-4">
             <Mail className="mr-4 text-teal-300" />
-            <a href="mailto:rajlaxmig27@example.com" className="text-white hover:text-teal-300 transition-colors">rajlaxmig27@example.comm</a>
+            <a href="mailto:rajlaxmig27@example.com" className="text-white hover:text-teal-300 transition-colors">rajlaxmig27@example.com</a>
           </div>
           <div className="flex items-center">
             <MapPin className="mr-4 text-teal-300" />
@@ -84,10 +88,20 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full bg-teal-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-teal-600 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-300 focus:ring-opacity-50"
+            disabled={isLoading}
+            className="w-full bg-teal-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-teal-600 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-300 focus:ring-opacity-50 disabled:opacity-50"
           >
-            <Send className="inline mr-2" size={18} />
-            Send Message
+            {isLoading ? (
+              <>
+                <span className="animate-spin inline-block mr-2">⏳</span>
+                Sending...
+              </>
+            ) : (
+              <>
+                <Send className="inline mr-2" size={18} />
+                Send Message
+              </>
+            )}
           </button>
           {status && <p className="mt-4 text-center text-white">{status}</p>}
         </form>
