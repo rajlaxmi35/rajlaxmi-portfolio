@@ -46,7 +46,7 @@ export default function Contact() {
           <h3 className="text-2xl font-semibold mb-4 text-teal-300">Get in Touch</h3>
           <div className="flex items-center mb-4">
             <Mail className="mr-4 text-teal-300" />
-            <a href="mailto:rajlaxmig27@example.com" className="text-white hover:text-teal-300 transition-colors">rajlaxmig27@example.com</a>
+            <a href="mailto:rajlaxmi.codes@gmail.com" className="text-white hover:text-teal-300 transition-colors">rajlaxmi.codes@gmail.com</a>
           </div>
           <div className="flex items-center">
             <MapPin className="mr-4 text-teal-300" />

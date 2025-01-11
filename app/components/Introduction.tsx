@@ -28,7 +28,7 @@ export default function Introduction() {
           <a href="https://www.linkedin.com/in/raj-laxmi/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-teal-300 transition-colors">
             <Linkedin size={32} />
           </a>
-          <a href="mailto:rajlaxmig27@gmail.com" className="text-white hover:text-teal-300 transition-colors">
+          <a href="mailto:rajlaxmi.codes@gmail.com" className="text-white hover:text-teal-300 transition-colors">
             <Mail size={32} />
           </a>
         </div>
